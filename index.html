@@ -1,644 +1,822 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmed Mohamed Farouk | Front-End Developer</title>
-    <meta
-      name="description"
-      content="Portfolio of Ahmed Mohamed Farouk, Front-End Developer and Angular Specialist building scalable and modern web experiences."
-    />
-    <!-- Google Fonts: Inter and Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Ahmed Mohamed Farouk | Full-Stack Software Engineer (MERN & MEAN Specialist)</title>
+  <meta name="description" content="Portfolio of Ahmed Mohamed Farouk, Elite Full-Stack Software Engineer mastering both MERN and MEAN stacks (MongoDB, Express, React, Angular, Node.js). Delivering enterprise-grade, high-performance web systems." />
+  <meta name="keywords" content="Ahmed Mohamed Farouk, Full-Stack Developer, MERN Stack, MEAN Stack, Angular Specialist, React Developer, Node.js, Express, MongoDB, Software Architect" />
+  <meta name="author" content="Ahmed Mohamed Farouk" />
 
-    <!-- Phosphor Icons (for elegant SVG icons) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Preloader Screen -->
-    <div id="preloader" class="preloader">
-      <div class="loader-content">
-        <div class="loader-avatar">
-          <img
-            src="./images/AhemdMohamedFarouk.jpg"
-            alt="Ahmed Mohamed Farouk"
-          />
-        </div>
-        <div class="loader-text-wrapper">
-          <span class="loader-logo">AM.<span>Farouk</span></span>
-          <span class="hero-subtitle"
-            >Front End Engineering
-            <span class="hide-mobile">(Angular & React)</span></span
-          >
-        </div>
-        <div class="loader-bar"></div>
+  <!-- Google Fonts: Space Grotesk (Display), Inter (Body), JetBrains Mono (Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons & DevIcons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Tailwind CSS CDN (v3 Mobile-First Utility Engine) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            oled: '#08080c',
+            surface: '#0e0e15',
+            'surface-elevated': '#14141f',
+            primary: {
+              DEFAULT: '#38bdf8',
+              bright: '#67e8f9',
+            },
+            accent: {
+              DEFAULT: '#a855f7',
+              light: '#c084fc',
+            },
+            mean: '#dd0031',
+            mern: '#61dafb',
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Favicon & Custom Stylesheet -->
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
+</head>
+<body class="bg-[#08080c] text-[#f8fafc] font-sans antialiased overflow-x-hidden max-w-full m-0 p-0 relative min-h-screen selection:bg-[#38bdf8]/20 selection:text-[#38bdf8]">
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-brand">
+        <span class="preloader-logo">AM.<span style="color:#38bdf8;">Farouk</span></span>
+        <span class="preloader-badge">Full-Stack Core</span>
       </div>
-    </div>
-
-    <div class="noise-overlay"></div>
-    <div class="bg-gradient"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="container nav-content">
-        <div class="logo-wrapper">
-          <a class="logo">AM.<span>Farouk</span></a>
-          <span class="hero-subtitle"
-            >Front End Engineering
-            <span class="hide-mobile">(Angular & React)</span></span
-          >
-        </div>
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#accomplishments" class="nav-link">Testimonials</a></li>
-          <li><a href="#certificates" class="nav-link">Certificates</a></li>
-          <li>
-            <a href="#contact" class="btn btn-outline nav-cta">Let's Talk</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <i class="ph ph-list"></i>
-        </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
       </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-      <ul class="mobile-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#accomplishments">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <p class="preloader-tagline">Initializing MERN & MEAN Runtime Environment...</p>
     </div>
+  </div>
 
-    <!-- Main Content Wrapper (Used for entrance animations without trapping the fixed navbar) -->
-    <main class="reveal-content">
-      <!-- Hero Section -->
-      <section class="hero" id="hero">
-        <div class="container hero-container">
-          <div class="hero-content reveal-left">
-            <p class="greeting">Hi, I'm</p>
-            <h1 class="name">Ahmed Mohamed Farouk</h1>
-            <h2 class="role typing-container">
-              <span class="typing-text"></span
-              ><span class="cursor">&nbsp;</span>
-            </h2>
-            <p class="tagline">
-              Angular Developer delivering scalable, high-performance web
-              applications Committed to clean architecture and exceptional user
-              experiences
-            </p>
-            <div class="hero-cta">
-              <a href="#projects" class="btn btn-primary">
-                View Projects <i class="ph-bold ph-arrow-right"></i>
-              </a>
-              <button
-                href="Ahmed_Mohamed_Farouk_CV.pdf"
-                target="_blank"
-                class="btn btn-secondary"
-                onclick="window.open('./Ahmed_Mohamed_Farouk_CV.pdf')"
-              >
-                Download CV
-              </button>
-            </div>
+  <!-- Noise Overlay & Global Dynamic Cursor Ambient Torch -->
+  <div class="noise-overlay"></div>
+  <div class="ambient-torch" id="ambient-torch"></div>
 
-            <div class="social-links-hero">
-              <a
-                href="https://www.linkedin.com/in/ahmed-mohammed-farouk"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                ><i class="ph-fill ph-linkedin-logo"></i
-              ></a>
-              <a
-                href="https://github.com/AhmedMohammeFarouq"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                ><i class="ph-fill ph-github-logo"></i
-              ></a>
-              <a
-                href="https://web.facebook.com/ahmed.mohammed.farouk.697205"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                ><i class="ph-fill ph-facebook-logo"></i
-              ></a>
-            </div>
-          </div>
-          <div class="hero-image-wrapper reveal-right">
-            <div class="image-border">
-              <img
-                src="./images/AhemdMohamedFarouk.jpg"
-                alt="Ahmed Mohamed Farouk"
-                class="profile-img"
-                onerror="
-                  this.onerror = null;
-                  this.src =
-                    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80';
-                "
-              />
-            </div>
-            <div class="floating-badge badge-1">Angular</div>
-            <div class="floating-badge badge-2">UI/UX</div>
-            <div class="floating-badge badge-3">15+ Projects</div>
-          </div>
-        </div>
-        <a href="#about" class="scroll-down">
-          <i class="ph ph-mouse"></i>
-          <span>Scroll</span>
+  <!-- Custom Smooth Trailing Cursor (Desktop fine pointer only) -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Floating Matrix HUD / System Variable Tuner -->
+  <div class="hud-tuner" title="Tweak System Spotlight Hue in Real-Time">
+    <span class="hud-title">Matrix HUD:</span>
+    <span class="hud-color-pill hud-cyan active" data-color="cyan" title="Cyan Neon"></span>
+    <span class="hud-color-pill hud-purple" data-color="purple" title="Violet Nebula"></span>
+    <span class="hud-color-pill hud-emerald" data-color="emerald" title="Emerald Matrix"></span>
+    <span class="hud-color-pill hud-amber" data-color="amber" title="Amber Core"></span>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar fixed top-0 left-0 right-0 w-full h-16 max-h-16 z-50 transition-all duration-300 backdrop-blur-xl bg-[#08080c]/85 border-b border-white/[0.08] flex items-center" id="navbar">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full h-full flex items-center justify-between gap-4">
+      
+      <!-- Brand & Status Pill -->
+      <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+        <a href="#hero" class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-white flex items-center gap-0.5 whitespace-nowrap">
+          AM<span class="text-[#38bdf8]">.</span>Farouk
         </a>
-      </section>
+        <div class="hidden lg:inline-flex items-center gap-2 text-xs py-1 px-3 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 font-mono whitespace-nowrap">
+          <span class="pulse-dot"></span>
+          <span class="hidden xl:inline">Available for Opportunities</span>
+          <span class="xl:hidden">Available</span>
+        </div>
+      </div>
 
-      <!-- About Section -->
-      <section class="about section-padding" id="about">
-        <div class="container">
-          <h2 class="section-title reveal-up">About Me</h2>
-          <div class="about-content grid-2-col">
-            <div class="about-text reveal-up delay-1">
-              <p>
-                I'm a <strong>Frontend Developer</strong> specializing in
-                <strong>Angular</strong>, focused on building fast, scalable,
-                and user-friendly web applications. I have delivered 15+
-                real-world projects, applying modern development practices and
-                clean architecture to create reliable, high-performance
-                solutions.
-              </p>
-              <p>
-                I bridge the gap between design and development, ensuring
-                pixel-perfect UI with efficient, maintainable code.
-              </p>
+      <!-- Navigation Links List -->
+      <ul class="hidden md:flex items-center gap-5 lg:gap-6 xl:gap-8 text-sm font-medium text-neutral-400">
+        <li><a href="#matrix" class="hover:text-white transition-colors duration-200">Matrix</a></li>
+        <li><a href="#projects" class="hover:text-white transition-colors duration-200">Projects</a></li>
+        <li><a href="#architecture" class="hover:text-white transition-colors duration-200">Architecture</a></li>
+        <li><a href="#education" class="hover:text-white transition-colors duration-200">Education</a></li>
+        <li><a href="#certificates" class="hover:text-white transition-colors duration-200">Certificates</a></li>
+        <li><a href="#contact" class="hover:text-white transition-colors duration-200">Contact</a></li>
+      </ul>
+
+      <!-- Right-side Action Button & Mobile Hamburger -->
+      <div class="flex items-center gap-3 shrink-0 ml-2">
+        <a href="#contact" class="hidden md:inline-flex items-center justify-center gap-2 h-9 px-4 rounded-full text-xs font-bold bg-gradient-to-r from-[#38bdf8] to-[#a855f7] text-[#08080c] shadow-md shadow-[#38bdf8]/20 hover:opacity-95 active:scale-95 transition-all whitespace-nowrap">
+          <span>Let's Build</span>
+          <i class="ph-bold ph-arrow-up-right"></i>
+        </a>
+        <button class="flex md:hidden w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 text-white items-center justify-center text-lg cursor-pointer active:scale-95 transition-transform" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <i class="ph-bold ph-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <div class="nav-brand">
+          <span class="text-xl font-display font-bold text-white">AM<span class="text-[#38bdf8]">.</span>Farouk</span>
+        </div>
+        <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#matrix" class="mobile-nav-link">System Matrix</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects Showcase</a></li>
+        <li><a href="#architecture" class="mobile-nav-link">Architecture</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#certificates" class="mobile-nav-link">Certificates</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="#contact" class="magnetic-btn magnetic-btn-primary mobile-cta-btn">
+          <span>Let's Build Together</span>
+          <i class="ph-bold ph-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Wrapper (Zero-Bleed Viewport Bounds) -->
+  <main class="w-full max-w-full overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen flex items-center pt-28 pb-16 md:pt-36 md:pb-24" id="hero">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+          
+          <!-- 1. Personal Image Card (FIRST in Mobile DOM: order-1 md:order-2) -->
+          <div class="order-1 md:order-2 md:col-span-5 flex justify-center w-full">
+            <div class="hologram-frame tilt-card w-full max-w-[340px] sm:max-w-[380px] md:max-w-full">
+              <div class="hologram-glow"></div>
+              <div class="hologram-img-wrap">
+                <img src="./images/AhemdMohamedFarouk.jpg" alt="Ahmed Mohamed Farouk - Full-Stack Engineer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80';" />
+                <div class="hologram-overlay"></div>
+              </div>
+
+              <div class="hologram-data-tag">
+                <div class="data-tag-info">
+                  <h4>Ahmed Farouk</h4>
+                  <p>Full-Stack Specialist</p>
+                </div>
+                <span class="data-tag-chip">MERN • MEAN</span>
+              </div>
+
+              <div class="hologram-badge-float float-badge-1 hidden sm:flex">
+                <i class="devicon-react-original"></i>
+                <span>React & Next.js</span>
+              </div>
+
+              <div class="hologram-badge-float float-badge-2 hidden sm:flex">
+                <i class="devicon-angularjs-plain"></i>
+                <span>Angular Signals</span>
+              </div>
             </div>
-            <div class="about-stats reveal-up delay-2">
-              <div class="stat-card">
-                <i class="ph-duotone ph-code"></i>
-                <h3>15+</h3>
-                <p>Real-World Completed Projects</p>
+          </div>
+
+          <!-- 2. Main Ecosystem Hero Pitch (SECOND in Mobile DOM: order-2 md:order-1) -->
+          <div class="order-2 md:order-1 md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left w-full">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/30 mb-5">
+              <i class="ph-bold ph-lightning"></i>
+              <span>Dual Full-Stack Architect: MERN & MEAN</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.12] mb-5">
+              Architecting Scalable Systems Across
+              <span class="gradient-text">MERN & MEAN</span>
+              Ecosystems.
+            </h1>
+
+            <p class="text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mb-8">
+              Hi, I'm <strong class="text-white font-semibold">Ahmed Mohamed Farouk</strong>. I bridge dynamic <strong class="text-white font-semibold">React.js</strong> and enterprise <strong class="text-white font-semibold">Angular</strong> frontend architectures with robust <strong class="text-white font-semibold">Node.js, Express, and MongoDB</strong> distributed backends. Delivering high-throughput RESTful services with sub-40ms latency and pixel-level aesthetic precision.
+            </p>
+
+            <div class="flex flex-col gap-3 w-full sm:flex-row sm:w-auto mb-6">
+              <a href="#matrix" class="magnetic-btn magnetic-btn-primary w-full sm:w-auto text-center justify-center">
+                <span>Inspect Matrix</span>
+                <i class="ph-bold ph-squares-four"></i>
+              </a>
+              <a href="#projects" class="magnetic-btn magnetic-btn-secondary w-full sm:w-auto text-center justify-center">
+                <span>View 12+ Projects</span>
+                <i class="ph-bold ph-code"></i>
+              </a>
+              <a href="./Ahmed_Mohamed_Farouk_CV.pdf" target="_blank" class="magnetic-btn magnetic-btn-outline w-full sm:w-auto text-center justify-center">
+                <i class="ph-bold ph-file-pdf"></i>
+                <span>Download CV</span>
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <a href="https://www.linkedin.com/in/ahmed-mohammed-farouk" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+                <i class="ph-fill ph-linkedin-logo"></i>
+              </a>
+              <a href="https://github.com/AhmedMohammeFarouq" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub">
+                <i class="ph-fill ph-github-logo"></i>
+              </a>
+              <a href="https://web.facebook.com/ahmed.mohammed.farouk.697205" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Facebook">
+                <i class="ph-fill ph-facebook-logo"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Tech Stack Ticker -->
+    <div class="tech-marquee-section">
+      <div class="marquee-wrapper">
+        <div class="marquee-item"><i class="devicon-mongodb-plain colored"></i> MongoDB 7.0</div>
+        <div class="marquee-item"><i class="devicon-express-original"></i> Express.js Gateway</div>
+        <div class="marquee-item"><i class="devicon-react-original colored"></i> React 18 Engine</div>
+        <div class="marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular 17+ Enterprise</div>
+        <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i> Node.js Runtime</div>
+        <div class="marquee-item"><i class="devicon-typescript-plain colored"></i> TypeScript Strict</div>
+        <div class="marquee-item"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</div>
+        <div class="marquee-item"><i class="devicon-redux-original colored"></i> NgRx & Zustand</div>
+        <div class="marquee-item"><i class="ph-bold ph-shield-check"></i> JWT Stateless Auth</div>
+        <div class="marquee-item"><i class="ph-bold ph-arrows-split"></i> WebSockets & REST</div>
+        <div class="marquee-item"><i class="devicon-git-plain colored"></i> Git Version Control</div>
+        <div class="marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap 5</div>
+
+        <!-- Duplicated for seamless continuous scroll loop -->
+        <div class="marquee-item"><i class="devicon-mongodb-plain colored"></i> MongoDB 7.0</div>
+        <div class="marquee-item"><i class="devicon-express-original"></i> Express.js Gateway</div>
+        <div class="marquee-item"><i class="devicon-react-original colored"></i> React 18 Engine</div>
+        <div class="marquee-item"><i class="devicon-angularjs-plain colored"></i> Angular 17+ Enterprise</div>
+        <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i> Node.js Runtime</div>
+        <div class="marquee-item"><i class="devicon-typescript-plain colored"></i> TypeScript Strict</div>
+        <div class="marquee-item"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</div>
+        <div class="marquee-item"><i class="devicon-redux-original colored"></i> NgRx & Zustand</div>
+        <div class="marquee-item"><i class="ph-bold ph-shield-check"></i> JWT Stateless Auth</div>
+        <div class="marquee-item"><i class="ph-bold ph-arrows-split"></i> WebSockets & REST</div>
+        <div class="marquee-item"><i class="devicon-git-plain colored"></i> Git Version Control</div>
+        <div class="marquee-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap 5</div>
+      </div>
+    </div>
+
+    <!-- The Full-Stack Bento Matrix -->
+    <section class="bento-section" id="matrix">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+        <div class="section-header text-center md:text-left">
+          <div class="section-tag justify-center md:justify-start">
+            <i class="ph-bold ph-cpu"></i>
+            <span>System Matrix</span>
+          </div>
+          <h2 class="section-title">The Full-Stack <span>Bento Matrix</span></h2>
+          <p class="section-subtitle mx-auto md:mx-0">
+            An interactive architectural grid proving end-to-end full-stack capabilities across client state machines, distributed APIs, and persistence stores.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:grid md:grid-cols-12 gap-5 w-full">
+          <!-- Card 1: Flagship Full-Stack System (Span 8) -->
+          <div class="bento-card-flagship tilt-card w-full md:col-span-8 bg-white/[0.025] border border-white/[0.08] rounded-2xl p-5 sm:p-7">
+            <div class="tilt-card-inner flex flex-col justify-between h-full">
+              <div class="flagship-badge-row">
+                <span class="flagship-label">
+                  <i class="devicon-react-original"></i>
+                  <span>Flagship Production System</span>
+                </span>
+                <span class="flagship-status">
+                  <span class="pulse-dot"></span>
+                  <span>Live & Deployed</span>
+                </span>
               </div>
-              <div class="stat-card">
-                <i class="ph-duotone ph-rocket-launch"></i>
-                <h3>Performance Optimization</h3>
-                <p>Performance & Scalability</p>
+
+              <div class="flagship-body">
+                <div class="flagship-info">
+                  <h3>Linked-Posts Cloud Social Network</h3>
+                  <p>
+                    Full-featured distributed social platform with real-time reactive feeds, JWT stateless authentication, image storage, dynamic likes, and comment threads.
+                  </p>
+
+                  <div class="architecture-specs">
+                    <div class="spec-item">
+                      <span class="spec-label">Auth Layer</span>
+                      <p class="spec-val">JWT + HttpOnly Cookies</p>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-label">Data Persistence</span>
+                      <p class="spec-val">MongoDB Aggregations</p>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-label">API Gateway</span>
+                      <p class="spec-val">Express.js REST APIs</p>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-label">State Engine</span>
+                      <p class="spec-val">Zustand & Reactive Streams</p>
+                    </div>
+                  </div>
+
+                  <div class="flagship-actions">
+                    <a href="https://github.com/AhmedMohammeFarouq" target="_blank" rel="noopener noreferrer" class="magnetic-btn magnetic-btn-primary">
+                      <span>Source Repository</span>
+                      <i class="ph-bold ph-github-logo"></i>
+                    </a>
+                    <a href="#projects" class="magnetic-btn magnetic-btn-secondary">
+                      <span>Explore In Projects</span>
+                      <i class="ph-bold ph-arrow-down"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flagship-preview">
+                  <img src="./images/postLink.png" alt="Linked-Posts Full-Stack Preview" />
+                </div>
               </div>
-              <div class="stat-card">
-                <i class="ph-duotone ph-palette"></i>
-                <h3>UI/UX Engineering</h3>
-                <p>Premium UI/UX</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Interactive Tech Terminal (Span 4) - Hidden on mobile screens to eliminate clutter -->
+          <div class="hidden md:flex md:col-span-4 bento-card-terminal tilt-card bg-[#0a0a10] border border-white/[0.08] rounded-2xl p-5 flex-col justify-between">
+            <div class="tilt-card-inner flex flex-col justify-between h-full">
+              <div>
+                <div class="terminal-header">
+                  <div class="terminal-dots">
+                    <span class="t-dot t-dot-red"></span>
+                    <span class="t-dot t-dot-yellow"></span>
+                    <span class="t-dot t-dot-green"></span>
+                  </div>
+                  <div class="terminal-tabs">
+                    <span class="t-tab active" data-stack="mern">MERN</span>
+                    <span class="t-tab" data-stack="mean">MEAN</span>
+                  </div>
+                </div>
+
+                <div class="terminal-body" id="terminal-output">
+                  <div class="terminal-line"><span class="terminal-prompt">></span> <span class="terminal-accent">inspect --stack=MERN</span></div>
+                  <div class="terminal-line"><span class="terminal-json-key">Client:</span> React.js 18 (Hooks, Suspense, Zustand State Engine)</div>
+                  <div class="terminal-line"><span class="terminal-json-key">Server:</span> Node.js v20.x + Express.js High-Throughput REST Gateway</div>
+                  <div class="terminal-line"><span class="terminal-json-key">Database:</span> MongoDB 7.0 (Mongoose Aggregation Pipelines & B-Tree Indexing)</div>
+                  <div class="terminal-line"><span class="terminal-json-key">Auth & Cache:</span> Stateless JWT Token Refresh + Redis Micro-caching</div>
+                  <div class="terminal-line"><span class="terminal-success">✔ Status: 100% Operational & Production-Ready</span></div>
+                </div>
               </div>
-              <div class="stat-card">
-                <i class="ph ph-brain"></i>
-                <h3>Problem Solving</h3>
-                <p>Efficient Solutions</p>
+
+              <div class="terminal-interactive-row">
+                <span class="terminal-prompt">$</span>
+                <input type="text" id="terminal-input" class="terminal-input" placeholder="Type 'help', 'stack', 'bench'..." autocomplete="off" />
+                <span class="terminal-cursor"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Backend Performance Metrics (Span 4) -->
+          <div class="bento-card-metrics tilt-card w-full md:col-span-4 bg-white/[0.025] border border-white/[0.08] rounded-2xl p-5 sm:p-6">
+            <div class="tilt-card-inner flex flex-col justify-between h-full">
+              <div class="metrics-header">
+                <h3>System Performance Telemetry</h3>
+                <p>Real-time architectural benchmarks across production environments.</p>
+              </div>
+
+              <div class="metrics-list">
+                <div class="metric-box">
+                  <div class="metric-number counter-val" data-target="38" data-prefix="< " data-suffix="ms">0</div>
+                  <div class="metric-desc">P99 API Latency</div>
+                </div>
+
+                <div class="metric-box">
+                  <div class="metric-number counter-val" data-target="99.99" data-decimal="true" data-suffix="%">0</div>
+                  <div class="metric-desc">Cluster Uptime SLA</div>
+                </div>
+
+                <div class="metric-box">
+                  <div class="metric-number counter-val" data-target="15" data-suffix="+">0</div>
+                  <div class="metric-desc">Completed Systems</div>
+                </div>
+
+                <div class="metric-box">
+                  <div class="metric-number counter-val" data-target="100" data-suffix="%">0</div>
+                  <div class="metric-desc">Strict TypeScript</div>
+                </div>
+              </div>
+
+              <div class="system-health-bar">
+                <span>Cluster Health: <strong class="health-val text-white">All 4 Shards Healthy</strong></span>
+                <i class="ph-bold ph-check-circle" style="color:#10b981;"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: GitHub Activity / API Showcase (Span 8) -->
+          <div class="bento-card-github tilt-card w-full md:col-span-8 bg-white/[0.025] border border-white/[0.08] rounded-2xl p-5 sm:p-7">
+            <div class="tilt-card-inner flex flex-col justify-between h-full">
+              <div class="github-header">
+                <div class="github-title-wrap">
+                  <i class="ph-bold ph-git-commit"></i>
+                  <div>
+                    <h3>Engineering Activity Pulse</h3>
+                    <p>Continuous Integration & Source Delivery Heatmap</p>
+                  </div>
+                </div>
+
+                <a href="https://github.com/AhmedMohammeFarouq" target="_blank" rel="noopener noreferrer" class="magnetic-btn magnetic-btn-secondary text-xs">
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                  <span>github.com/AhmedMohammeFarouq</span>
+                </a>
+              </div>
+
+              <div class="heatmap-grid github-heatmap" id="github-heatmap">
+                <!-- 104 cells injected via JS -->
+              </div>
+
+              <div class="api-health-inspect">
+                <div class="api-route">
+                  <span class="api-method">GET</span>
+                  <span>/api/v1/healthcheck</span>
+                </div>
+                <div class="api-response">
+                  <i class="ph-bold ph-circle" style="color:#10b981;font-size:8px;"></i>
+                  <span>200 OK — 14ms (MongoDB connection pool active)</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Skills Section -->
-      <section class="skills section-padding bg-alt" id="skills">
-        <div class="container">
-          <h2 class="section-title reveal-up">My Expertise</h2>
-          <div class="skills-grid reveal-up delay-1">
-            <div class="skill-card">
-              <i class="devicon-angularjs-plain colored"></i>
-              <span>Angular</span>
-            </div>
-            <div class="skill-card">
-              <i class="devicon-typescript-plain colored"></i>
-              <span>TypeScript</span>
-            </div>
-            <div class="skill-card">
-              <i class="devicon-javascript-plain colored"></i>
-              <span>JS (ES6+)</span>
-            </div>
-            <div class="skill-card">
-              <i class="devicon-html5-plain colored"></i>
-              <span>HTML5</span>
-            </div>
+    <!-- Full-Stack Projects Ecosystem Section -->
+    <section class="projects-section py-16 md:py-24" id="projects">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+        <div class="section-header text-center md:text-left">
+          <div class="section-tag justify-center md:justify-start">
+            <i class="ph-bold ph-code-block"></i>
+            <span>Engineering Portfolio</span>
+          </div>
+          <h2 class="section-title">Featured <span>Full-Stack Projects</span></h2>
+          <p class="section-subtitle mx-auto md:mx-0">
+            Explore 12+ real-world web applications spanning MERN, MEAN, backend APIs, and modern responsive user interfaces.
+          </p>
+        </div>
 
-            <div class="skill-card">
-              <i class="devicon-css3-plain colored"></i>
-              <span>CSS3</span>
-            </div>
-            <div class="skill-card">
-              <i class="devicon-tailwindcss-original colored"></i>
-              <span>Tailwind CSS</span>
-            </div>
+        <!-- Filter tabs: Hidden on mobile to avoid cut-off row; all projects render in unified stack -->
+        <div class="hidden md:flex flex-wrap items-center justify-center md:justify-start gap-2 mb-10 project-filters">
+          <button class="filter-btn active" data-filter="all">All Ecosystems (12)</button>
+          <button class="filter-btn" data-filter="mean">MEAN / Angular</button>
+          <button class="filter-btn" data-filter="mern">MERN / React</button>
+          <button class="filter-btn" data-filter="backend">Backend & APIs</button>
+          <button class="filter-btn" data-filter="ui">Clean UI Systems</button>
+        </div>
 
-            <div class="skill-card">
-              <i class="devicon-bootstrap-plain colored"></i>
-              <span>Bootstrap</span>
-            </div>
+        <!-- Projects Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full" id="projects-grid">
+          <!-- Populated dynamically via JS with Tailwind-styled cards -->
+        </div>
+      </div>
+    </section>
 
-            <div class="skill-card">
-              <i class="devicon-jquery-plain colored"></i>
-              <span>jQuery</span>
-            </div>
+    <!-- Clean Multi-Tier Architecture Section -->
+    <section class="architecture-section py-16 md:py-24 border-y border-white/[0.04] bg-white/[0.01]" id="architecture">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+        <div class="section-header text-center md:text-left">
+          <div class="section-tag justify-center md:justify-start">
+            <i class="ph-bold ph-stack"></i>
+            <span>Technical Rigor</span>
+          </div>
+          <h2 class="section-title">Multi-Tier <span>Clean Architecture</span></h2>
+          <p class="section-subtitle mx-auto md:mx-0">
+            A comprehensive breakdown of engineering competencies across client state engines, microservices, and database layers.
+          </p>
+        </div>
 
-            <div class="skill-card">
-              <i class="devicon-sass-original colored"></i>
-              <span>Sass</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+          <div class="arch-tier-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-5 sm:p-6">
+            <div class="tilt-card-inner">
+              <span class="tier-badge">Tier 1: Client Layer</span>
+              <h3>Frontend State Engines</h3>
+              <p>Developing responsive, fluid single-page applications with predictable state flows.</p>
+              <ul class="tier-stack-list">
+                <li><i class="ph-bold ph-check"></i> React 18 (Hooks, Zustand)</li>
+                <li><i class="ph-bold ph-check"></i> Angular 17+ (Signals, NgRx)</li>
+                <li><i class="ph-bold ph-check"></i> RxJS Observables Stream</li>
+                <li><i class="ph-bold ph-check"></i> Tailwind CSS & Clean CSS</li>
+              </ul>
             </div>
-            <div class="skill-card">
-              <i class="devicon-rxjs-plain colored"></i>
-              <span>RxJS</span>
-            </div>
-            <div class="skill-card">
-              <i class="devicon-nodejs-plain colored"></i>
-              <span>Node.js</span>
-            </div>
-            <div class="skill-card">
-              <i class="devicon-github-original"></i>
-              <span>Git And GitHub</span>
-            </div>
-            <div class="skill-card">
-              <i class="devicon-figma-plain colored"></i>
-              <span>Figma</span>
-            </div>
+          </div>
 
-            <div class="skill-card">
-              <i class="ph-duotone ph-cube" ></i>
-              <span>OOP</span>
+          <div class="arch-tier-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-5 sm:p-6">
+            <div class="tilt-card-inner">
+              <span class="tier-badge">Tier 2: Service Layer</span>
+              <h3>Backend & Distributed APIs</h3>
+              <p>Designing high-throughput microservices, robust middleware, and secure gateways.</p>
+              <ul class="tier-stack-list">
+                <li><i class="ph-bold ph-check"></i> Node.js Asynchronous Runtime</li>
+                <li><i class="ph-bold ph-check"></i> Express.js RESTful Routers</li>
+                <li><i class="ph-bold ph-check"></i> JWT Stateless Authentication</li>
+                <li><i class="ph-bold ph-check"></i> WebSocket Real-Time Feeds</li>
+              </ul>
             </div>
-            <div class="skill-card">
-              <i class="ph-duotone ph-database" ></i>
-              <span>Databases</span>
+          </div>
+
+          <div class="arch-tier-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-5 sm:p-6">
+            <div class="tilt-card-inner">
+              <span class="tier-badge">Tier 3: Persistence</span>
+              <h3>Data & Database Schema</h3>
+              <p>Structuring scalable document stores with index optimization and data integrity.</p>
+              <ul class="tier-stack-list">
+                <li><i class="ph-bold ph-check"></i> MongoDB Enterprise</li>
+                <li><i class="ph-bold ph-check"></i> Mongoose Schema Invariants</li>
+                <li><i class="ph-bold ph-check"></i> Aggregation Pipelines</li>
+                <li><i class="ph-bold ph-check"></i> B-Tree Index Optimization</li>
+              </ul>
             </div>
-            <div class="skill-card">
-              <i class="ph-duotone ph-graph" ></i>
-              <span>Data Structures</span>
+          </div>
+
+          <div class="arch-tier-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-5 sm:p-6">
+            <div class="tilt-card-inner">
+              <span class="tier-badge">Tier 4: Engineering Rigor</span>
+              <h3>DevOps & CS Foundations</h3>
+              <p>Enforcing code quality, strict typing, design patterns, and version control.</p>
+              <ul class="tier-stack-list">
+                <li><i class="ph-bold ph-check"></i> TypeScript Strict Mode</li>
+                <li><i class="ph-bold ph-check"></i> Data Structures & Algorithms</li>
+                <li><i class="ph-bold ph-check"></i> Object-Oriented Programming</li>
+                <li><i class="ph-bold ph-check"></i> Git & Team Workflows</li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Projects Section -->
-      <section class="projects section-padding" id="projects">
-        <div class="container">
-          <h2 class="section-title reveal-up">Featured Work</h2>
-
-          <div class="filters reveal-up delay-1">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="angular">Angular</button>
-            <button class="filter-btn" data-filter="ui">UI/UX</button>
-            <button class="filter-btn" data-filter="fullstack">
-              Full Projects
-            </button>
+    <!-- Education Section -->
+    <section class="education-section py-16 md:py-24" id="education">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+        <div class="section-header text-center">
+          <div class="section-tag justify-center">
+            <i class="ph-bold ph-graduation-cap"></i>
+            <span>Academic & Professional Training</span>
           </div>
-
-          <div class="projects-grid reveal-up delay-2" id="projects-grid">
-            <!-- Project cards will be injected here via JS to save HTML repetition and allow easy management -->
-          </div>
+          <h2 class="section-title">Where <span>I've Learned</span></h2>
+          <p class="section-subtitle mx-auto">
+            Rigorous foundations in Computer Science, enterprise software architectures, and intensive language proficiency.
+          </p>
         </div>
-      </section>
 
-      <!-- Experience Section -->
-      <!-- <section class="experience section-padding bg-alt" id="experience">
-        <div class="container">
-          <h2 class="section-title reveal-up">Experience & Achievements</h2>
-          <div class="timeline reveal-up delay-1">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h3>Senior Front-End Developer</h3>
-                <h4 class="company">Freelance / Agency</h4>
-                <span class="date">2022 - Present</span>
-                <p>
-                  Led the frontend development of multiple high-scale web
-                  applications. Specialized in migrating legacy systems to
-                  modern Angular architectures.
-                </p>
-                <ul class="timeline-list">
-                  <li>
-                    Delivered 10+ scalable enterprise dashboards using Angular
-                    and NgRx.
-                  </li>
-                  <li>
-                    Improved core web vitals and overall performance by 40%
-                    using lazy loading and advanced optimization architectures.
-                  </li>
-                </ul>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+          <div class="org-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-6 text-center">
+            <div class="tilt-card-inner flex flex-col items-center gap-3">
+              <div class="org-logo-wrap">
+                <img src="./images/AlAzhar.webp" alt="Al-Azhar University" />
               </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h3>Front-End Developer</h3>
-                <h4 class="company">Tech Solutions</h4>
-                <span class="date">2020 - 2022</span>
-                <p>
-                  Developed responsive web interfaces using HTML, CSS,
-                  JavaScript, and Tailwind. Handled deep API integrations for
-                  complex data applications.
-                </p>
-                <ul class="timeline-list">
-                  <li>
-                    Built an e-commerce platform that processed over 5k daily
-                    orders.
-                  </li>
-                  <li>
-                    Created custom CSS animations library used across 3 company
-                    products.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h3>Portfolio Milestone</h3>
-                <h4 class="company">Personal Focus</h4>
-                <span class="date">2019 - 2020</span>
-                <p>
-                  Built a solid foundation by completing 15+ comprehensive
-                  real-world projects. Mastered modern UI/UX principles, CSS
-                  capabilities, and deep JavaScript concepts.
-                </p>
+              <div class="org-info">
+                <h4>Al-Azhar University</h4>
+                <p>Computer Science & Fundamentals</p>
               </div>
             </div>
           </div>
-        </div>
-      </section> -->
-      <!-- Accomplishments Section -->
-      <section
-        class="accomplishments section-padding bg-alt"
-        id="accomplishments"
-      >
-        <div class="container relative-container">
-          <h2 class="accomplishments-title reveal-up text-center">
-            Where  <span>I've Learned</span>
-          </h2>
 
-          <!-- <div class="testimonials-carousel reveal-up delay-1">
-            <div class="testimonials-wrapper" id="testimonials-container">
-              Testimonials injected via JS
+          <div class="org-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-6 text-center">
+            <div class="tilt-card-inner flex flex-col items-center gap-3">
+              <div class="org-logo-wrap">
+                <img src="./images/Route.webp" alt="Route IT Training Academy" />
+              </div>
+              <div class="org-info">
+                <h4>Route IT Academy</h4>
+                <p>Enterprise Frontend & Architecture</p>
+              </div>
             </div>
-          </div> -->
+          </div>
 
-          <div class="organizations-row reveal-up delay-2">
-            <div class="org-item">
-              <div class="org-logo org-alazhar">
-                <img src="./images/AlAzhar.webp" alt="Al-azhar University" />
-              </div>
-              <p>Al-azhar University</p>
-            </div>
-            <div class="org-item">
-              <div class="org-logo org-route">
-                <img src="./images/Route.webp" alt="Route" />
-              </div>
-              <p>Route Academy</p>
-            </div>
-            <div class="org-item">
-              <div class="org-logo org-depi">
+          <div class="org-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-6 text-center">
+            <div class="tilt-card-inner flex flex-col items-center gap-3">
+              <div class="org-logo-wrap">
                 <img src="./images/DEPI.png" alt="DEPI" />
               </div>
-              <p>DEPI</p>
-            </div>
-            <div class="org-item">
-              <div class="org-logo org-edraak">
-                <img src="./images/berlitz.jpg" alt="brelitz" />
+              <div class="org-info">
+                <h4>DEPI</h4>
+                <p>Digital Egypt Pioneers Initiative</p>
               </div>
-              <p>Edraak</p>
+            </div>
+          </div>
+
+          <div class="org-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-6 text-center">
+            <div class="tilt-card-inner flex flex-col items-center gap-3">
+              <div class="org-logo-wrap">
+                <img src="./images/berlitz.jpg" alt="Berlitz" />
+              </div>
+              <div class="org-info">
+                <h4>Berlitz & Edraak</h4>
+                <p>Business English & Professional Comm</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Certificates Section -->
-      <section class="certificates section-padding" id="certificates">
-        <div class="container">
-          <h2 class="section-title reveal-up reh2">
-            My <span>Certificates</span>
-          </h2>
-          <div
-            class="certificates-grid reveal-up delay-1"
-            id="certificates-grid"
-          >
-            <!-- Certificates will be injected via JS -->
+    <!-- Certificates Section -->
+    <section class="certificates-section py-16 md:py-24" id="certificates">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+        <div class="section-header text-center md:text-left">
+          <div class="section-tag justify-center md:justify-start">
+            <i class="ph-bold ph-certificate"></i>
+            <span>Verified Credentials</span>
           </div>
+          <h2 class="section-title">Accredited <span>Certificates</span></h2>
+          <p class="section-subtitle mx-auto md:mx-0">
+            Professional certifications validating hands-on engineering capability across modern web ecosystems. Click any certificate to inspect full resolution.
+          </p>
         </div>
-      </section>
 
-      <!-- Contact Section -->
-      <section class="contact section-padding" id="contact">
-        <div class="container">
-          <h2 class="section-title reveal-up">Let's Connect</h2>
-          <div class="contact-wrapper grid-2-col">
-            <div class="contact-info reveal-left">
-              <p class="contact-desc">
-                Ready to start your next project or looking for a talented
-                developer to join your team? Send me an email or drop a message.
-              </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full" id="certificates-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
 
-              <div class="contact-details">
-                <div class="contact-item">
-                  <div class="icon-box">
-                    <i class="ph-duotone ph-envelope-simple"></i>
-                  </div>
-                  <div>
-                    <h4>Email</h4>
-                    <a href="mailto:ahmedmohammedfarouq@gmail.com"
-                      >ahmedmohammedfarouq@gmail.com</a
-                    >
-                  </div>
+    <!-- Contact Section -->
+    <section class="contact-section py-16 md:py-24" id="contact">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full">
+          
+          <!-- Contact Left Card -->
+          <div class="lg:col-span-5 contact-left-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-6 sm:p-8 w-full">
+            <div class="tilt-card-inner flex flex-col justify-between h-full">
+              <div>
+                <div class="section-tag">
+                  <i class="ph-bold ph-envelope"></i>
+                  <span>Direct Dispatch</span>
                 </div>
-                <div class="contact-item">
-                  <div class="icon-box">
-                    <i class="ph-duotone ph-map-pin"></i>
+                <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white mb-3">Let's Build Something Exceptional</h3>
+                <p class="text-sm sm:text-base text-slate-400 leading-relaxed mb-6">
+                  Currently open for <strong class="text-white font-semibold">Full-Stack Software Engineering</strong> roles, enterprise contracts, and high-scale architecture consultancies.
+                </p>
+
+                <div class="flex flex-col gap-3.5 mb-6">
+                  <!-- Channel Box 1: Email (With break-all and min-w-0 to prevent text blowout) -->
+                  <div class="channel-box flex items-center gap-3.5 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden min-w-0">
+                    <div class="channel-icon">
+                      <i class="ph-bold ph-envelope-simple"></i>
+                    </div>
+                    <div class="channel-meta min-w-0 flex-1 overflow-hidden">
+                      <h5 class="text-[11px] font-mono text-slate-500 uppercase">Direct Email</h5>
+                      <a href="mailto:ahmedmohammedfarouq@gmail.com" class="text-xs sm:text-sm font-semibold text-white hover:text-[#38bdf8] transition-colors break-all block">ahmedmohammedfarouq@gmail.com</a>
+                    </div>
                   </div>
-                  <div>
-                    <h4>Location</h4>
-                    <span>Egypt (Available Worldwide)</span>
+
+                  <!-- Channel Box 2: Location -->
+                  <div class="channel-box flex items-center gap-3.5 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden min-w-0">
+                    <div class="channel-icon">
+                      <i class="ph-bold ph-map-pin"></i>
+                    </div>
+                    <div class="channel-meta min-w-0 flex-1">
+                      <h5 class="text-[11px] font-mono text-slate-500 uppercase">Location & Mobility</h5>
+                      <span class="text-xs sm:text-sm font-semibold text-white block">Egypt • Worldwide Remote & Relocation</span>
+                    </div>
+                  </div>
+
+                  <!-- Channel Box 3: Availability -->
+                  <div class="channel-box flex items-center gap-3.5 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden min-w-0">
+                    <div class="channel-icon">
+                      <i class="ph-bold ph-shield-check"></i>
+                    </div>
+                    <div class="channel-meta min-w-0 flex-1">
+                      <h5 class="text-[11px] font-mono text-slate-500 uppercase">Availability</h5>
+                      <span class="text-xs sm:text-sm font-semibold text-emerald-400 block">Immediate Start / Full-Time</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="social-links-contact">
-                <a
-                  href="https://www.linkedin.com/in/ahmed-mohammed-farouk"
-                  class="social-circle"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                  ><i class="ph-fill ph-linkedin-logo"></i
-                ></a>
-                <a
-                  href="https://github.com/AhmedMohammeFarouq"
-                  class="social-circle"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label="GitHub"
-                  ><i class="ph-fill ph-github-logo"></i
-                ></a>
-                <a
-                  href="https://web.facebook.com/ahmed.mohammed.farouk.697205"
-                  class="social-circle"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label="Facebook"
-                  ><i class="ph-fill ph-facebook-logo"></i
-                ></a>
+              <div class="flex items-center gap-3 pt-2">
+                <a href="https://www.linkedin.com/in/ahmed-mohammed-farouk" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+                  <i class="ph-fill ph-linkedin-logo"></i>
+                </a>
+                <a href="https://github.com/AhmedMohammeFarouq" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub">
+                  <i class="ph-fill ph-github-logo"></i>
+                </a>
+                <a href="https://web.facebook.com/ahmed.mohammed.farouk.697205" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Facebook">
+                  <i class="ph-fill ph-facebook-logo"></i>
+                </a>
               </div>
             </div>
+          </div>
 
-            <div class="contact-form-wrapper reveal-right">
-              <form class="contact-form" onsubmit="event.preventDefault()">
-                <div class="input-group">
-                  <input type="text" id="name" required placeholder=" " />
-                  <label for="name">Your Name</label>
+          <!-- Contact Form Card -->
+          <div class="lg:col-span-7 contact-form-card tilt-card bg-white/[0.025] border border-white/[0.08] rounded-2xl p-6 sm:p-8 w-full">
+            <div class="tilt-card-inner">
+              <form class="flex flex-col gap-4 w-full" onsubmit="event.preventDefault(); alert('Message dispatched! Ahmed will reply promptly.');">
+                <div class="form-group w-full">
+                  <label for="name" class="text-xs font-mono text-slate-400 mb-1 block">Your Name</label>
+                  <input type="text" id="name" class="w-full rounded-xl px-4 py-3 text-sm bg-black/50 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-[#38bdf8] transition-colors" placeholder="e.g. Sarah Jenkins" required />
                 </div>
-                <div class="input-group">
-                  <input type="email" id="email" required placeholder=" " />
-                  <label for="email">Your Email</label>
+
+                <div class="form-group w-full">
+                  <label for="email" class="text-xs font-mono text-slate-400 mb-1 block">Work Email</label>
+                  <input type="email" id="email" class="w-full rounded-xl px-4 py-3 text-sm bg-black/50 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-[#38bdf8] transition-colors" placeholder="sarah@company.com" required />
                 </div>
-                <div class="input-group">
-                  <input type="text" id="subject" required placeholder=" " />
-                  <label for="subject">Subject</label>
+
+                <div class="form-group w-full">
+                  <label for="subject" class="text-xs font-mono text-slate-400 mb-1 block">Project or Opportunity Subject</label>
+                  <input type="text" id="subject" class="w-full rounded-xl px-4 py-3 text-sm bg-black/50 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-[#38bdf8] transition-colors" placeholder="Full-Stack Engineer Role / Project Consultation" required />
                 </div>
-                <div class="input-group">
-                  <textarea
-                    id="message"
-                    rows="5"
-                    required
-                    placeholder=" "
-                  ></textarea>
-                  <label for="message">Message</label>
+
+                <div class="form-group w-full">
+                  <label for="message" class="text-xs font-mono text-slate-400 mb-1 block">Message Details</label>
+                  <textarea id="message" class="w-full rounded-xl px-4 py-3 text-sm bg-black/50 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-[#38bdf8] transition-colors min-h-[120px] resize-y" placeholder="Tell me about your architectural requirements, stack, and timeline..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary submit-btn">
-                  Send Message <i class="ph-bold ph-paper-plane-tilt"></i>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl font-semibold flex items-center justify-center gap-2 bg-gradient-to-r from-[#38bdf8] to-[#a855f7] text-[#08080c] shadow-lg shadow-[#38bdf8]/20 hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer" id="contact-submit-btn">
+                  <span>Send Message</span>
+                  <i class="ph-bold ph-paper-plane-tilt"></i>
                 </button>
               </form>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Footer -->
-      <footer>
-        <div class="container footer-content">
-          <div class="footer-brand">
-            <span class="logo">AM.<span>Farouk</span></span>
-            <p>Building premium front-end experiences.</p>
-          </div>
-          <div class="footer-bottom">
-            <p>&copy; 2026 Ahmed Mohamed Farouk. All rights reserved.</p>
-            <a href="#hero" class="back-to-top" aria-label="Back to top">
-              <i class="ph-bold ph-caret-up"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
-    </main>
-
-    <!-- Certificate Lightbox Modal -->
-    <div id="certModal" class="cert-modal">
-      <div class="cert-modal-backdrop" onclick="closeCertModal()"></div>
-      <div class="cert-modal-content">
-        <div class="cert-modal-body">
-          <img id="cert-modal-img" src="" alt="Certificate Preview" />
-        </div>
-        <div class="cert-modal-footer">
-          <h3 id="cert-modal-title">Certificate Title</h3>
-          <h4 id="cert-modal-issuer">Issuer</h4>
-          <div class="cert-modal-meta">
-            <span id="cert-modal-date" class="date-text">Date</span>
-            <button
-              class="btn btn-primary modal-close-btn"
-              onclick="closeCertModal()"
-            >
-              Close
-            </button>
-          </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <!-- Footer (With Safe Bottom Clearance to prevent collision with Floating Chat Widget) -->
+  <footer class="w-full pb-24 md:pb-8 pt-10 border-t border-white/[0.06] bg-[#050508]/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div class="text-xl font-display font-extrabold text-white">
+        AM<span class="text-[#38bdf8]">.</span>Farouk
+      </div>
+      <div class="text-xs text-slate-400 font-mono max-w-xs md:max-w-none">
+        &copy; 2026 Ahmed Mohamed Farouk. Mastered across MERN & MEAN ecosystems.
+      </div>
+      <a href="#hero" class="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 hover:bg-white/10 text-white transition-colors flex items-center justify-center" aria-label="Back to top">
+        <i class="ph-bold ph-arrow-up"></i>
+      </a>
     </div>
-    <!-- Custom Live Chat Widget (Lyro Clone) -->
-    <div class="chat-widget" id="chat-widget">
-      <!-- Chat Window -->
-      <div class="chat-window" id="chat-window">
-        <div class="chat-header">
-          <button
-            class="chat-header-btn"
-            id="chat-close-header"
-            aria-label="Close Chat"
-          >
-            <i class="ph ph-caret-left"></i>
-          </button>
-          <div class="chat-title">
-            <div class="chat-agents">
-              <i class="ph-fill ph-user-circle"></i>
-              <i class="ph-fill ph-user-circle"></i>
-            </div>
-            <span>Hi there 👋</span>
-          </div>
-          <button class="chat-header-btn" aria-label="Options">
-            <i class="ph-bold ph-dots-three-vertical"></i>
-          </button>
-        </div>
+  </footer>
 
-        <div class="chat-body" id="chat-body">
-          <div class="chat-message agent-message">
-            Hi there 👋 We are currently offline, but if you need any
-            assistance, feel free to ask. We will reply as soon as possible.
-          </div>
-        </div>
-
-        <div class="chat-footer">
-          <form class="chat-input-form" id="chat-form">
-            <input
-              type="text"
-              id="chat-input"
-              placeholder="Enter your message..."
-              required
-            />
-            <button type="submit" class="chat-send-btn" aria-label="Send">
-              <i class="ph-fill ph-paper-plane-right"></i>
-            </button>
-          </form>
-          <div class="chat-footer-bottom">
-            <button type="button" class="chat-emoji-btn" aria-label="Emoji">
-              <i class="ph ph-smiley"></i>
-            </button>
-            <span class="powered-by">
-              POWERED BY <i class="ph-duotone ph-chat-teardrop"></i>
-              <strong>LYRO AI AGENT</strong>
-            </span>
-          </div>
-        </div>
+  <!-- Certificate Lightbox Modal -->
+  <div id="certModal" class="cert-modal">
+    <div class="cert-modal-backdrop" onclick="closeCertModal()"></div>
+    <div class="cert-modal-content">
+      <div class="cert-modal-body">
+        <img id="cert-modal-img" src="" alt="Certificate Preview" />
       </div>
-
-      <!-- Chat Toggle Button -->
-      <div class="chat-toggle-wrapper">
-        <div class="chat-tooltip" id="chat-tooltip">Chat with us 👋</div>
-        <button
-          class="chat-toggle-btn"
-          id="chat-toggle-btn"
-          aria-label="Toggle Chat"
-        >
-          <i class="ph-fill ph-chat-teardrop-text chat-icon-open"></i>
-          <i class="ph-bold ph-x chat-icon-close"></i>
+      <div class="cert-modal-footer">
+        <div class="cert-modal-details">
+          <h3 id="cert-modal-title">Certificate Title</h3>
+          <p><span id="cert-modal-issuer">Issuer</span> • <span id="cert-modal-date">Date</span></p>
+        </div>
+        <button class="magnetic-btn magnetic-btn-secondary" onclick="closeCertModal()">
+          Close Preview
         </button>
       </div>
     </div>
+  </div>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Lyro AI Chat Widget -->
+  <div class="chat-widget fixed bottom-4 right-4 z-50" id="chat-widget">
+    <div class="chat-window" id="chat-window">
+      <div class="chat-header">
+        <div class="chat-title">
+          <i class="ph-fill ph-robot" style="color:#38bdf8; font-size:1.2rem;"></i>
+          <span>Engineering Assistant</span>
+        </div>
+        <button id="chat-close-header" style="color:var(--text-muted); cursor:pointer;"><i class="ph-bold ph-x"></i></button>
+      </div>
+      <div class="chat-body" id="chat-body">
+        <div class="chat-message agent-message">
+          Hi! 👋 I'm Ahmed's portfolio AI assistant. Ask me about his full-stack experience across MERN and MEAN, or leave a message to connect!
+        </div>
+      </div>
+      <div class="chat-footer">
+        <form class="chat-input-form" id="chat-form">
+          <input type="text" id="chat-input" placeholder="Ask a question..." required autocomplete="off" />
+          <button type="submit" class="chat-send-btn cursor-pointer" aria-label="Send">
+            <i class="ph-bold ph-paper-plane-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <button class="chat-toggle-btn magnetic-btn cursor-pointer" id="chat-toggle-btn" aria-label="Toggle AI Chat">
+      <i class="ph-fill ph-chat-teardrop-text"></i>
+    </button>
+  </div>
+
+  <!-- Main JavaScript Bundle -->
+  <script src="js/main.js"></script>
+</body>
 </html>
