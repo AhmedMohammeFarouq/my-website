@@ -1,0 +1,9 @@
+# Robots.txt for https://ahmed-farouq.vercel.app
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://ahmed-farouq.vercel.app/sitemap.xml
+
+# Host Directive
+Host: https://ahmed-farouq.vercel.app
